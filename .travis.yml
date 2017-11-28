@@ -3,6 +3,20 @@ language: node_js
 cache:
   directories:
     - node_modules
+env:
+  global:
+    - GITHUB_REPO="https://imsingh.github.io/ngx-typeahead/"
+    - GITHUB_NAME="Indermohan Singh"
+    - GITHUB_EMAIL="indermohansinghk7@gmail.com"
+install:
+  - npm i --silent --no-optional -g @angular/cli@1.5.4
+  - npm i --silent --no-optional -g angular-cli-ghpages@0.5.2
+script:
+  cd demo
+  npm install
+  ng build --prod --base-href "$GITHUB_REPO"
+  ngh
+    
 notifications:
   email: false
 node_js:
