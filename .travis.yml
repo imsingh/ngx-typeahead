@@ -10,7 +10,7 @@ script:
   - cd demo
   - npm install
   - ng build --prod --base-href "https://imsingh.github.io/ngx-typeahead/"
-  - ngh --no-silent
+  - ngh --no-silent --repo=https://GITHUB_TOKEN@github.com/imsingh/ngx-typeahead.git --name="imsingh" --email=indermohansinghk7@gmail.com
     
 notifications:
   email: false
